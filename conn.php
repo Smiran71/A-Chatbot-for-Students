@@ -15,8 +15,8 @@
 
 
   $conn = mysqli_init();
- mysqli_ssl_set($con,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
- mysqli_real_connect($con, "mysqlchat.mysql.database.azure.com", "sakshi","mayuri@2023", "chatbot", 3306, MYSQLI_CLIENT_SSL);
+ mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+ mysqli_real_connect($conn, "mysqlchat.mysql.database.azure.com", "sakshi","mayuri@2023", "chatbot", 3306, MYSQLI_CLIENT_SSL);
  if (!$conn) {
    die("Connection failed: " . mysqli_connect_error());
  }
