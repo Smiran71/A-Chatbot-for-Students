@@ -316,7 +316,7 @@ $result = $stmt->get_result();
 
 if ($result->num_rows > 0) {
     // Redirect to chatbot.php if email and password match
-	echo '<script>window.location.href = "chatbot.php";</script>';
+	echo '<script>window.location.href = "chatbot_stud/chatbot.php";</script>';
 
    // exit(); // Make sure to exit after the header redirect
 } else {
