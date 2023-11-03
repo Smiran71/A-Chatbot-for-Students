@@ -11,7 +11,14 @@
 // if (!$conn) {
 //     die("Connection failed: " . mysqli_connect_error());
 // }
-include("conn.php")
+// include("conn.php")
+    $conn = mysqli_init();
+ mysqli_ssl_set($conn,NULL,NULL, "DigiCertGlobalRootCA.crt.pem", NULL, NULL);
+ mysqli_real_connect($conn, "mysqlchat.mysql.database.azure.com", "sakshi","mayuri@2023", "chatbot", 3306, MYSQLI_CLIENT_SSL);
+ if (!$conn) {
+   die("Connection failed: " . mysqli_connect_error());
+ }
+ echo "Connected successfully";
 // Assuming you have received the user's question and stored it in $userQuestion
 $userQuestion = mysqli_real_escape_string($conn, $_POST['text']);  // Make sure to sanitize user input
 
