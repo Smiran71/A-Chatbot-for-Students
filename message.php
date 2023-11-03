@@ -18,7 +18,7 @@
  if (!$conn) {
    die("Connection failed: " . mysqli_connect_error());
  }
- echo "Connected successfully";
+ // echo "Connected successfully";
 // Assuming you have received the user's question and stored it in $userQuestion
 $userQuestion = mysqli_real_escape_string($conn, $_POST['text']);  // Make sure to sanitize user input
 
