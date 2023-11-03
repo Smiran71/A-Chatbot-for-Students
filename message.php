@@ -1,17 +1,17 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "chatbot";
+// $servername = "localhost";
+// $username = "root";
+// $password = "";
+// $database = "chatbot";
 
-// Create connection
-$conn = mysqli_connect($servername, $username, $password, $database);
+// // Create connection
+// $conn = mysqli_connect($servername, $username, $password, $database);
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
+// // Check connection
+// if (!$conn) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
+include("conn.php")
 // Assuming you have received the user's question and stored it in $userQuestion
 $userQuestion = mysqli_real_escape_string($conn, $_POST['text']);  // Make sure to sanitize user input
 
